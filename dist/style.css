@@ -82,11 +82,6 @@ h2 {
     height:100vh;
 }
 
-.scrollArrow {
-    position: absolute;
-    width: $base * 3.5;
-}
-
 .body1 {
     background-color:#393E46;
     color:#EEEEEE;
@@ -169,7 +164,7 @@ h2 {
     transform-style:preserve-3d;
 }
 
-input[type=radio] {
+input[type='radio'] {
     position:relative;
     top:108%;
     left:50%;
@@ -182,11 +177,11 @@ input[type=radio] {
     visibility:hidden;
 }
 
-input[type=radio]:nth-child(5) {
+input[type='radio']:nth-child(5) {
     margin-right:0px;
 }
 
-input[type=radio]:checked {
+input[type='radio']:checked {
     opacity:1;
 }
 
