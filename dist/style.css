@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    color:#EEEEEE;
+    font-size:80px;
+}
+
+h2 {
+    font-size:40px;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+    perspective:10px;
+}
+
+.header {
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    width:101%;
+    transform-style: preserve-3d;
+    z-index:-1;
+}
+
+.headerBackground, .headerForeground {
+    position:absolute;
+    left:0%;
+    height:100%;
+    width:101%;
+    object-fit:cover;
+    z-index:-1;
+}
+
+.profPic {
+    position:absolute;
+    left:0%;
+    bottom:0%;
+    height: 600px;
+    width:auto;
+    z-index:-1;
+}
+
+.headerBackground {
+    transform: translateZ(-10px) scale(2);
+}
+
+.headerForeground {
+    transform: translateZ(-5px) scale(1.5);
+}
+
+.nameBox {
+    position:absolute;
+    bottom:55%;
+    right:5%;
+    display:flex;
+    flex-direction:column;
+    z-index:2;
+    text-shadow: black 2px 2px;
+    margin-left:2vw;
+}
+
+.jobTitle {
+    color: #B55400;
+    display:flex;
+    gap:10px;
+    margin-top:-70px;
+    text-shadow: black 2px 2px;
+}
+
+
+.body1 {
+    background-color:#393E46;
+    color:#EEEEEE;
+    margin-top:-40px;
+    padding:80px;
+    font-size:18px;
+}
+
+.body2 {
+    background-color:#222831;
+    color:white;
+    height:auto;
+    margin-top:-40px;
+    text-align:center;
+    padding:50px;
+}
+
+.devTools {
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.toolContainer {
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+.toolImage {
+    height:100px;
+    width:auto;
+    transition:all .5s ease;
+}
+
+.toolTitle {
+    position:absolute;
+    transition:all .5s ease;
+    visibility:hidden;
+    opacity:0;
+    font-weight:bold;
+    transition: all .5s ease;
+}
+
+.toolContainer:hover .toolImage{
+    top:20px;
+    transform:translateY(-20px);
+}
+
+.toolContainer:hover .toolTitle{
+    transform:translateY(20px);
+    visibility:visible;
+    opacity:1;
+}
+
+.body3 {
+    height:700px;
+    background-color: #393E46;
+    color:#EEEEEE;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.applications {
+    margin:0 auto;
+    padding-top:50px;
+    height:800px;
+    padding:20px;
+}
+
+.carousel {
+    position:relative;
+    height:100%;
+    width:400px;
+    perspective:1800px;
+    transform-style:preserve-3d;
+}
+
+input[type=radio] {
+    position:relative;
+    top:108%;
+    left:50%;
+    width:18px;
+    height:18px;
+    margin:0 15px 0 0;
+    opacity:0.4;
+    transform:translateX(-83px);
+    cursor:pointer;
+}
+
+input[type=radio] {
+    margin-right:0px;
+    visibility:hidden;
+}
+
+input[type=radio]:checked {
+    opacity:1;
+}
+
+.carousel label, .carousel label img {
+    position:absolute;
+    width:400px;
+    height:400px;
+    left:0;
+    top:0;
+    border:2px solid black;
+    border-radius:5px;
+    box-shadow:2px 2px 10px 2px rgba(0,0,0,.5);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:transform 400ms ease-in-out;
+}
+
+#img1:checked ~ #gif1,
+    #img2:checked ~ #gif2,
+        #img3:checked ~ #gif3,
+            #img4:checked ~ #gif4,
+                #img5:checked ~ #gif5 {
+transform:translate3d(0%,0,0px);
+        }
+
+#img1:checked ~ #gif2,
+    #img2:checked ~ #gif3,
+        #img3:checked ~ #gif4,
+            #img4:checked ~ #gif5,
+                #img5:checked ~ #gif1 {
+transform:translate3d(40%,0,-100px);
+        }
+
+
+#img1:checked ~ #gif3,
+    #img2:checked ~ #gif4,
+        #img3:checked ~ #gif5,
+            #img4:checked ~ #gif1,
+                #img5:checked ~ #gif2 {
+transform:translate3d(80%,0,-250px);
+        }
+
+#img1:checked ~ #gif4,
+    #img2:checked ~ #gif5,
+        #img3:checked ~ #gif1,
+            #img4:checked ~ #gif2,
+                #img5:checked ~ #gif3 {
+transform:translate3d(-80%,0,-250px);
+        }
+
+#img1:checked ~ #gif5,
+    #img2:checked ~ #gif1,
+        #img3:checked ~ #gif2,
+            #img4:checked ~ #gif3,
+                #img5:checked ~ #gif4 {
+transform:translate3d(-40%,0,-100px);
+        }
