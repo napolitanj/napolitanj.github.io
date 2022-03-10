@@ -169,9 +169,8 @@ input[type=radio] {
     cursor:pointer;
 }
 
-input[type=radio] {
+input[type=radio]:nth-child(5) {
     margin-right:0px;
-    visibility:hidden;
 }
 
 input[type=radio]:checked {
