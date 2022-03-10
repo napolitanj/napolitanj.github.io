@@ -167,6 +167,7 @@ input[type=radio] {
     opacity:0.4;
     transform:translateX(-83px);
     cursor:pointer;
+    visibility:hidden;
 }
 
 input[type=radio]:nth-child(5) {
